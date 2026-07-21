@@ -12,12 +12,14 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     background:#f4f4f4;
     color:#333;
+    padding-top:80px;
 }
 
 main{
     width:90%;
     max-width:1000px;
     margin:30px auto;
+    margin-top: 90px;
 }
 
 /* ===========================
@@ -30,6 +32,12 @@ main{
     justify-content:space-between;
     align-items:center;
     padding:15px 40px;
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
 }
 
 .menu img{
