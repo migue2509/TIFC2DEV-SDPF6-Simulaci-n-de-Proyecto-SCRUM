@@ -210,3 +210,27 @@ aside p {
     height: 170px;
   }
 }
+
+.cuerpo{
+    gap: 30px;            
+    display: flex;
+    flex-direction: row;     
+    padding: 100px;
+    border-radius: 20px;
+    width: 100%; 
+     
+}
+.contacto-info{
+     
+    width: 50%; 
+}
+
+.formulario{
+     
+    width: 50%; 
+}
+
+.casillas_formulario{
+    padding-top: 20px;
+}
+
