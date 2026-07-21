@@ -401,3 +401,13 @@ img{
     }
 
 }
+
+.imagen-quienes{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.imagen-quienes img{
+    width: 300px;
+    border-radius: 10px;
+}
