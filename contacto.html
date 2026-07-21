@@ -21,16 +21,50 @@
 
   <!-- ============================= -->
   <!-- MAIN: contenido principal     -->
-  <!-- Encargado: [nombre]           -->
+  <!-- Encargado: [Sebastian Cordoba]           -->
   <!-- ============================= -->
-  <main>
+  <main class="cuerpo">
 
-    <article>
-      <!-- Contenido / bloque principal de la página -->
+    <article class="contacto_info">
+      <h2> ¿Como llegar a nuestro grupo? </h2>
+      <p> Operamos en la ciudad de medellin, puedes buscarnos en nuestra sede fisica, contactarnos por medio de nuestro canales oficiales, o enviar una pregunta por medio del formulario. </p>
+       
+      <address class = "nuestra_info">
+      <p> Sobreviviendo al bootcamp</p>
+      <p> <strong>Direccion: </strong>Carrera 48 No. 10 Sur - 55 </p>
+      <p> <strong>Correo electronico: </strong>SobreviviendoAlBootcamp@gmail.com</p>
+      <p> <strong>Numero de telefono: </strong>302-426-38-90</p>
+      </address>
     </article>
 
-    <aside>
+    <aside class ="formulario" >
       <!-- Contenido secundario (opcional): datos extra, links relacionados, etc. -->
+       <form>
+
+        <div> 
+          <h2> Formulario de contacto </h2>
+        </div>
+        <div class="casillas_formulario"> 
+          <label for = "nombre"> Nombre </label>
+          <input type = "text"  id="nombre" placeholder = "nombre">
+        </div>
+
+        <div class="casillas_formulario"> 
+          <label for = "telefono" > Telefono </label>
+          <input type = "tel"  id="telefono" placeholder = "telefono">
+        </div>
+
+        <div class="casillas_formulario"> 
+          <label for = "correo"> Correo </label>
+          <input type = "email"  id="correo" placeholder = "correo">
+        </div>
+
+        <div class="casillas_formulario"> 
+          <label for = "mensaje"> Mensaje </label>
+          <textarea type = "email"  id="correo" placeholder = "escribe aqui tu mensaje"></textarea>
+        </div>
+
+       </form>
     </aside>
 
   </main>
