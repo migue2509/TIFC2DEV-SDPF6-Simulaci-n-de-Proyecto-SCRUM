@@ -1,212 +1,395 @@
-/* ============================= */
-/* VARIABLES DE COLOR (B&N + acento) */
-/* ============================= */
-:root {
-  --bg-dark: #0a0a0a;
-  --bg-card: #141414;
-  --border: #2a2a2a;
-  --text-main: #e8e8e8;
-  --text-dim: #888888;
-  --accent: #ff3b3b;
-  --white: #ffffff;
+/* ===========================
+        ESTILOS GENERALES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  background-color: var(--bg-dark);
-  color: var(--text-main);
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
 }
 
-/* ============================= */
-/* INTRO DEL BLOG                */
-/* ============================= */
-#intro {
-  text-align: center;
-  padding: 30px 20px 40px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
+main{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
 }
 
-#intro h1 {
-  font-family: 'Courier New', monospace;
-  font-size: 2rem;
-  color: var(--white);
-  margin-bottom: 10px;
+/* ===========================
+            MENU
+=========================== */
+
+.menu{
+    background:#1e293b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
 }
 
-#intro h1::before {
-  content: "> ";
-  color: var(--accent);
+.menu img{
+    width:170px;
 }
 
-#intro p {
-  color: var(--text-dim);
-  font-size: 1.05rem;
-  font-family: 'Courier New', monospace;
+.menu ul{
+    list-style:none;
+    display:flex;
 }
 
-/* ============================= */
-/* GRID DE ENTRADAS (posts)      */
-/* ============================= */
-#posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 0 10px;
+.menu li{
+    margin-left:25px;
 }
 
-/* ============================= */
-/* CADA TARJETA (article.post)   */
-/* estilo "ventana de terminal"  */
-/* ============================= */
-.post {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.post:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 0 20px rgba(255, 59, 59, 0.15);
+.menu a:hover{
+    color:#60a5fa;
 }
 
-/* --- Barra tipo terminal arriba de la tarjeta --- */
-.post::before {
-  content: "● ● ●";
-  display: block;
-  background-color: #000000;
-  color: #3a3a3a;
-  font-size: 0.7rem;
-  letter-spacing: 4px;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--border);
+/* ===========================
+            INTRO
+=========================== */
+
+#intro{
+    background:white;
+    padding:40px;
+    text-align:center;
+    border-radius:8px;
+    margin-bottom:30px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
-/* --- Foto + nombre (figure) --- */
-.post header figure {
-  margin: 0;
-  position: relative;
+#intro h1{
+    color:#1e293b;
+    margin-bottom:15px;
+    font-size:34px;
 }
 
-.post header figure img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(100%) contrast(1.1);
+#intro p{
+    color:#555;
+    font-size:18px;
 }
 
-.post header figure figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
-  color: var(--white);
-  font-family: 'Courier New', monospace;
-  font-weight: 600;
-  padding: 30px 15px 10px;
-  font-size: 0.95rem;
+/* ===========================
+        ARTICULOS
+=========================== */
+
+article.post{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
-.post header figure figcaption::before {
-  content: "// ";
-  color: var(--accent);
+article.post:hover{
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
-/* --- Pregunta (h2) tipo comentario de código --- */
-.post header h2 {
-  font-size: 1.05rem;
-  color: var(--white);
-  padding: 15px 18px 0;
-  line-height: 1.4;
-  font-family: 'Courier New', monospace;
+article.post header{
+    text-align:center;
 }
 
-/* --- Fecha (time) --- */
-.post header time {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-dim);
-  padding: 8px 18px 0;
-  font-family: 'Courier New', monospace;
+article.post h2{
+    margin:15px 0;
+    color:#1e293b;
 }
 
-/* --- Texto de la respuesta --- */
-.post > p {
-  padding: 14px 18px;
-  color: var(--text-main);
-  flex-grow: 1;
-  line-height: 1.6;
+article.post header p{
+    color:gray;
+    margin-bottom:20px;
 }
 
-/* --- Footer de la tarjeta (etiquetas tipo tags de código) --- */
-.post footer {
-  background-color: #000000;
-  padding: 12px 18px;
-  border-top: 1px solid var(--border);
+article.post p{
+    line-height:1.7;
+    text-align:justify;
 }
 
-.post footer p {
-  font-size: 0.78rem;
-  color: var(--text-dim);
-  font-family: 'Courier New', monospace;
+/* ===========================
+            FIGURE
+=========================== */
+
+figure{
+    margin-bottom:15px;
 }
 
-.post footer p::before {
-  content: "#";
-  color: var(--accent);
-  margin-right: 4px;
+figure img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #60a5fa;
 }
 
-/* ============================= */
-/* ASIDE (sobre el blog)         */
-/* estilo bloque de código       */
-/* ============================= */
-aside {
-  margin: 50px 10px 20px;
-  padding: 20px;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: 6px;
-  font-family: 'Courier New', monospace;
+figcaption{
+    margin-top:10px;
+    font-weight:bold;
 }
 
-aside h2 {
-  color: var(--white);
-  margin-bottom: 8px;
-  font-size: 1rem;
+/* ===========================
+        FOOTER DEL POST
+=========================== */
+
+article.post footer{
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #ddd;
 }
 
-aside h2::before {
-  content: "/* ";
-  color: var(--text-dim);
+article.post footer p{
+    color:#2563eb;
+    font-size:14px;
 }
 
-aside h2::after {
-  content: " */";
-  color: var(--text-dim);
+/* ===========================
+        QUIENES SOMOS
+=========================== */
+
+.article-quienes,
+.article-porque{
+    background:white;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
-aside p {
-  color: var(--text-dim);
-  font-size: 0.9rem;
+.parrafo-quienes,
+.parrafo-porque{
+    margin-bottom:15px;
+    text-align:justify;
+    line-height:1.7;
 }
 
-/* ============================= */
-/* RESPONSIVE                    */
-/* ============================= */
-@media (max-width: 600px) {
-  #posts {
-    grid-template-columns: 1fr;
-  }
+.titulo-porque,
+.titulo-conquefin{
+    margin:30px 0 15px;
+    color:#1e293b;
+}
 
-  .post header figure img {
-    height: 170px;
-  }
+main ul{
+    margin-left:25px;
+    margin-top:15px;
+}
+
+main li{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+/* ===========================
+        CONTACTO
+=========================== */
+
+.cuerpo{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.contacto_info,
+.formulario{
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    flex:1;
+}
+
+.contacto_info h2,
+.formulario h2{
+    margin-bottom:20px;
+    color:#1e293b;
+}
+
+.contacto_info p{
+    margin-bottom:10px;
+}
+
+.nuestra_info{
+    margin-top:20px;
+    font-style:normal;
+}
+
+.casillas_formulario{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+label{
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input,
+textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border:1px solid #2563eb;
+}
+
+/* ===========================
+        BOTON
+=========================== */
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+    background:#1e293b;
+    color:white;
+    padding:30px;
+    margin-top:40px;
+}
+
+.footer-titulo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.footer-titulo h4{
+    font-size:24px;
+}
+
+.footer-columnas{
+    display:flex;
+    justify-content:space-around;
+    gap:30px;
+}
+
+.footer-autores,
+.footer-contacto{
+    width:300px;
+}
+
+.footer-columnas h3{
+    margin-bottom:15px;
+}
+
+.footer-columnas ul{
+    list-style:none;
+}
+
+.footer-columnas li{
+    margin-bottom:8px;
+}
+
+.footer-columnas a{
+    color:white;
+    text-decoration:none;
+}
+
+.footer-columnas a:hover{
+    color:#60a5fa;
+}
+
+/* ===========================
+        ESTILOS GENERALES
+=========================== */
+
+h2{
+    margin-bottom:15px;
+}
+
+p{
+    line-height:1.7;
+}
+
+a{
+    transition:0.2s;
+}
+
+img{
+    max-width:100%;
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .menu{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .menu img{
+        margin-bottom:15px;
+    }
+
+    .menu ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .menu li{
+        margin:10px 0;
+    }
+
+    .cuerpo{
+        flex-direction:column;
+    }
+
+    .footer-columnas{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .footer-autores,
+    .footer-contacto{
+        width:100%;
+    }
+
+    #intro h1{
+        font-size:28px;
+    }
+
+    article.post{
+        padding:20px;
+    }
+
+    figure img{
+        width:110px;
+        height:110px;
+    }
+
 }

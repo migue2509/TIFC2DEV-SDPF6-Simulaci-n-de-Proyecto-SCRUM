@@ -17,7 +17,7 @@
   <header>
 <script type="module" src="menunav.html"></script>
  <div class="menu">
-            <img src="/imagenes/equipoblog.png" alt="">
+            <img src="img/equipoblog.png" alt="">
                 <nav>
                       <ul>
                     <li> <a href="index.html"> Inicio</a></li>
@@ -37,17 +37,53 @@
     <!-- MAIN: contenido principal     -->
     <!-- Encargado: [nombre]           -->
     <!-- ============================= -->
-    <main>
+    <main class="cuerpo">
+ 
+    <article class="contacto_info">
+      <h2> ¿Como llegar a nuestro grupo? </h2>
+      <p> Operamos en la ciudad de medellin, puedes buscarnos en nuestra sede fisica, contactarnos por medio de nuestro canales oficiales, o enviar una pregunta por medio del formulario. </p>
+       
+      <address class = "nuestra_info">
+      <p> Sobreviviendo al bootcamp</p>
+      <p> <strong>Direccion: </strong>Carrera 48 No. 10 Sur - 55 </p>
+      <p> <strong>Correo electronico: </strong>SobreviviendoAlBootcamp@gmail.com</p>
+      <p> <strong>Numero de telefono: </strong>302-426-38-90</p>
+      </address>
+    </article>
+ 
+    <aside class ="formulario" >
+      <!-- Contenido secundario (opcional): datos extra, links relacionados, etc. -->
+       <form>
+ 
+        <div>
+          <h2> Formulario de contacto </h2>
+        </div>
+        <div class="casillas_formulario">
+          <label for = "nombre"> Nombre </label>
+          <input type = "text"  id="nombre" placeholder = "nombre">
+        </div>
+ 
+        <div class="casillas_formulario">
+          <label for = "telefono" > Telefono </label>
+          <input type = "tel"  id="telefono" placeholder = "telefono">
+        </div>
+ 
+        <div class="casillas_formulario">
+          <label for = "correo"> Correo </label>
+          <input type = "email"  id="correo" placeholder = "correo">
+        </div>
+ 
+        <div class="casillas_formulario">
+          <label for = "mensaje"> Mensaje </label>
+          <textarea type = "email"  id="mensaje" placeholder = "escribe aqui tu mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </div>
+ 
+       </form>
+    </aside>
+ 
+  </main>
 
-        <article>
-            <!-- Contenido / bloque principal de la página -->
-        </article>
-
-        <aside>
-            <!-- Contenido secundario (opcional): datos extra, links relacionados, etc. -->
-        </aside>
-
-    </main>
 
 
     <!-- ============================= -->
