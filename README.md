@@ -8,6 +8,6 @@ Integrantes:
 - Carol Estefany Piñeros
 - Michael Espinal
 
-LINK TRELLO: https://trello.com/b/yt0O3S8P/blog-proyecto-scrum
+LINK TRELLO: https://trello.com/invite/b/6a5f9d3c82ee29ba6e0fb1f2/ATTIfdb2750b0f417af4792923c6915805068D6CF4C6/blog-proyecto-scrum
 
 LINK GITHUB: https://github.com/migue2509/TIFC2DEV-SDPF6-Simulaci-n-de-Proyecto-SCRUM
